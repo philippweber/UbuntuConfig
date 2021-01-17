@@ -2,7 +2,12 @@
 
 **Warning:**
 
-I do not update this, so entries may be outdated
+These are my private notes, untidy & disorganized.
+
+I do not update this, so entries may be outdated.
+
+## Apps
+Apps & Co.
 
 ## Autostart
 Contains contents from ~/.config/autostart
