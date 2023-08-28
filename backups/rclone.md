@@ -12,7 +12,11 @@ cat ~/.config/rclone/rclone.conf
 
 rclone check ~/Dokumente/ 'gdrive:/Backup - Dokumente/'
 
+# Sync dry-run (delete files on remote)
 rclone sync -nv ~/Dokumente/ 'gdrive:/Backup - Dokumente/'
+
+# Copy dry-run
+rclone copy -nv ~/Dokumente/ 'gdrive:/Backup - Dokumente/'
 
 # git only
 rclone sync -v ~/Schreibtisch/git 'gdrive:/git-repo'
