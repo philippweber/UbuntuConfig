@@ -58,5 +58,14 @@ for m in /dev /dev/pts /proc /sys /run /tmp /var/lib/os-prober /etc/grub.d /etc/
 sudo umount /mnt/zfs/rpool/boot/efi/
 sudo zpool export bpool
 sudo zpool export rpool
+
+# Install signed EFI bootloader
+sudo apt install shim-signed
+# Check state
+mokutil --sb-state
+
+# Remove old bpool snapshots
+zfs list -r -t snapshot -o name,creation,refer bpool
+zfs list -r -t snapshot -o name bpool -H|head -5|xargs -rtl1 sudo zfs destroy
 ```
 
